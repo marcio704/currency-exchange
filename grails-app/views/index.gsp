@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <g:javascript src="angular.min.js"></g:javascript>
   	<g:javascript src="app.js"></g:javascript>
+  	<g:javascript src="jquery.mask.min.js"></g:javascript>
 
   </head>
   <body>
@@ -56,8 +57,8 @@
 		    	<div class="col-md-10">
 			    	<div class="input-group">
 						<span class="input-group-addon">$</span>
-						<input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="amount" 
-							ng-model="currencyCtrl.amount">
+						<input class="form-control" aria-label="Amount (to the nearest dollar)" name="amount" 
+							ng-model="currencyCtrl.amount" id="amount">
 					</div>
 				</div>
 				<div class="col-md-2">
@@ -81,5 +82,10 @@
 		    </div>
 	    </div>
     </div>
+    <script type="text/javascript">
+		$(document).ready(function() {
+		    	$('#amount').mask('000.000.000.000.000,00', {reverse: true});
+		});
+    </script>>
   </body>
 </html>

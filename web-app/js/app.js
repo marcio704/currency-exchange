@@ -7,14 +7,16 @@ app.controller('CurrencyController', function($scope, $http) {
 	$scope.currencyTo = "";
 
 	$scope.getConversion = function () {
-		$http.post("index/convert", {amount: that.amount, currencyFrom: that.currencyFrom, currencyTo: that.currencyTo})
+		$http.post("index/convert", {amount: that.amount.replace(",", "."), currencyFrom: that.currencyFrom, currencyTo: that.currencyTo})
 			.success(function(data) {
 				$('#convertedAmount').html(data);	
 				$('#amountMsg').css('display', 'block');
+				$('#amountErrorMsg').css('display', 'none');
 			})
 			.error(function() {
-				that.showErrorMsg('Error to access API! Not converted!');
-				
+				$('#convertedAmountError').html('Error! Amount not converted');	
+				$('#amountMsg').css('display', 'none');
+				$('#amountErrorMsg').css('display', 'block');
 			});
 	};
 
