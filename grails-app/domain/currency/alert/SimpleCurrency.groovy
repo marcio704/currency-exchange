@@ -3,6 +3,7 @@ package currency.alert
 import org.codehaus.jackson.annotate.JsonProperty;
 
 class SimpleCurrency {
+	public static final double LAST_VALUE = 0
 
 	String id
 	String description

@@ -5,7 +5,9 @@ class IndexController {
     def currencyConverterService
 
     def index() {
+    	currencyConverterService.startConversionJob()
     	List<SimpleCurrency> availableCurrencies = currencyConverterService.getAvailableCurrenciesFromMashapeAPI()
+    	
     	render(view: "/index", model: ['availableCurrencies': availableCurrencies])
     }
 
