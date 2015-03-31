@@ -6,7 +6,7 @@ class CurrencyJob {
 
 	private static final String CURRENCY_FROM = 'USD'
 	private static final String CURRENCY_TO = 'BRL'
-	private static final double ALERT_IN = 10 //Percentage to send rising notification
+	private static final double ALERT_IN = 1 //Percentage to send rising notification
 
 	private static int jobExecution = 0
 	public static double CURRENT_AMOUNT = 0
