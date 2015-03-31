@@ -66,6 +66,11 @@ environments {
                   token =  "vpgVPrkMotmshMODNLmGyTOH6tUfp1O0q0sjsntglBlVp6zcgY"
                   url = 'https://currencyconverter.p.mashape.com'
                 }
+        hipchat {
+                  token = "07aaadda4bad872d32a9edb76b232a"
+                  room = 216979
+                  url = "https://api.hipchat.com/v1/rooms/message"
+        }        
     }
     production {
         grails.logging.jul.usebridge = false

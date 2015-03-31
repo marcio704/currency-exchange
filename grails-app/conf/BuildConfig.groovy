@@ -44,9 +44,7 @@ grails.project.dependency.resolution = {
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
         runtime 'com.mashape.unirest:unirest-java:1.4.5'
-        //runtime 'org.codehaus.jackson:jackson-core:2.0.1'
         runtime 'org.codehaus.jackson:jackson-mapper-asl:1.5.0'
-        runtime 'org.quartz-scheduler:quartz:2.2.1'
     }
 
     plugins {
@@ -64,6 +62,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.2"
 
         compile ':cache:1.0.1'
+        compile ':quartz:1.0.1'
 
     }
 }

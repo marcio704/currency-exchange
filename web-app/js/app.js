@@ -7,7 +7,7 @@ app.controller('CurrencyController', function($scope, $http) {
 	$scope.currencyTo = "";
 
 	$scope.getConversion = function () {
-		$http.post("index/convert", {amount: that.amount.replace(",", "."), currencyFrom: that.currencyFrom, currencyTo: that.currencyTo})
+		$http.post("index/convert", {amount: that.amount.replace(".", "").replace(",", "."), currencyFrom: that.currencyFrom, currencyTo: that.currencyTo})
 			.success(function(data) {
 				$('#convertedAmount').html(data);	
 				$('#amountMsg').css('display', 'block');

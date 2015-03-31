@@ -84,8 +84,8 @@
     </div>
     <script type="text/javascript">
 		$(document).ready(function() {
-		    	$('#amount').mask('000.000.000.000.000,00', {reverse: true});
+		    $('#amount').mask('000.000.000.000.000,00', {reverse: true});
 		});
-    </script>>
+    </script>
   </body>
 </html>
