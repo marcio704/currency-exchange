@@ -18,7 +18,7 @@ class CurrencyJob {
     }
     
     def group = "guiato"
-	def description = "Find for value changes on currencies" 
+	def description = "Find for value changes on currencies (${CURRENCY_FROM} to ${CURRENCY_TO})" 
 
     def execute() {
     	if(jobExecution == 0) {
@@ -26,7 +26,7 @@ class CurrencyJob {
     		updateCurrentAmount()
     		println "Initial amount: ${CURRENT_AMOUNT}"
     	} else {
-    		if(currencyConverterService.isRisingNotificationSent(CURRENCY_FROM, CURRENCY_TO, 1)) {
+    		if(currencyConverterService.isChangingNotificationSent(CURRENCY_FROM, CURRENCY_TO, 1)) {
         		updateCurrentAmount()
         	}	
     	}
